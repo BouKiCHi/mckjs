@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>mck.js</title>
+  <script src="logs.js"></script>
+  <script src="main.js"></script>
+  <script src="base64.js"></script>
+  <script src="hexbin.js"></script>
+  <script src="tone.js"></script>
+  <script src="string.js"></script>
+  <script src="header.js"></script>
+  <script src="envelope.js"></script>
+  <script src="track.js"></script>
+  <script src="mml.js"></script>
+  <link rel="stylesheet" href="mck.css" type="text/css">
+</head>
+<body onload="loading();">
+
+<h2>mck.js 2016-03-20</h2>
+クライアントサイドで動作するMMLプレイヤーです。<br>
+動作確認:Firefox 45, Safari 9, Chrome 49<br>
+<textarea id="text" rows="20">
+A t120 o4 l4 v15 @2
+A cdefgab>c
+</textarea>
+<div class="mar10 btn_pnl">
+  <a class="btn" href="javascript:parse(false);" title="コンパイルと再生を行います">
+    <span class="mar10">PLAY</span>
+  </a>
+  <a class="btn" href="javascript:parse(true);" title="WAVファイルを保存するためのリンクを作成します">
+  <span class="mar10">WAV</span>
+  </a>
+  <a class="btn" href="javascript:toggle_elem('option');" title="オプションの表示を切り替えます">
+  <span class="mar10">OPTIONS</span>
+  </a>
+  <a class="btn" id="cancel" href="javascript:cancel_process();" title="処理を中断します">
+  <span class="mar10">CANCEL</span>
+  </a>
+</div>
+<div id="option">
+  <div class="mar10">
+    Skip:<input id="skip" value="0">
+    Frames:<input id="frames" value="0">
+    Rate:<input id="rate" value="22050">
+    Debug:<input id="debug" value="0" type="checkbox">
+  </div>
+</div>
+<div id="audio_div" class="mar10" style="display:none;">
+  <span id="audio">&nbsp;</span>
+</div>
+<div class="mar10 btn_pnl">
+  <a class="btn" href="javascript:save_text();" title="テキストデータのリンクを作成します">SAVE</a>
+  <a class="btn" href="javascript:load_text();" title="URLからデータを読み込みます">LOAD</a>
+  <a class="btn" href="javascript:reset_text();" title="URLをリセットします">RESET</a>
+</div>
+<div class="mar10 btn_pnl">
+  <span id="save"></span>
+</div>
+<br>
+<a class="link" href="ChangeLog" title="ChangeLogの表示">ChangeLog</a><br>
+</body>
+</html>

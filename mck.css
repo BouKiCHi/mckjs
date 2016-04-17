@@ -1,0 +1,64 @@
+body
+{
+	font-family : sans-serif;
+	color : #e0e0a0;
+	background-color: #9f0000;
+}
+
+div#option
+{
+	border : solid 1px black;
+	display : none;
+}
+
+#cancel
+{
+	display: none;
+}
+
+.btn_pnl
+{
+	height: 30px;
+}
+
+.mar10
+{
+	margin: 10px;
+}
+
+.mar5
+{
+	margin: 5px;
+}
+
+.link
+{
+	color: #e0e0a0;
+}
+
+.link:visited
+{
+	color: #a7a777;
+}
+
+
+#text {
+	width: 100%;
+}
+
+
+.btn {
+	background: #888;
+	border-top: 1px solid #AAA;
+	border-left: 1px solid #AAA;
+	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
+	color: #000000;
+	margin: 5px;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.btn:hover {
+	background: #ccc;
+}
